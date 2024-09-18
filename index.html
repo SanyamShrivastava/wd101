@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="index.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0; /* Ensure no default margin is applied */
+            padding: 50px;
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 55px;
+            max-width: 500px;
+            width: 100%;
+            margin-bottom: 40px;
+            margin-top: 10rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Style the heading */
+        .form-container h1 {
+            margin: 0;
+            padding-bottom: 20px;
+        }
+
+        /* Additional styles for form elements */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        #userEntries {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            overflow-x: auto; /* Ensure horizontal scrolling if needed */
+        }
+        input#name:invalid:focus{
+        border: 1px solid red;
+        }
+    </style>
+    
+</head>
+<body>
+<form id="user-form">
+    <h2>Registration Form</h2>
+
+   <label for="name">Name</label>
+   <input type="text" id="name" name="name" required>
+   <br>
+
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+ 
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+    <br>
+ 
+    <input type="checkbox" id="acceptTerms" name="acceptTerms">
+    <label for="acceptTerms">Accept Terms & Conditions</label>
+    <br>
+ 
+    <button type="submit">Submit</button>
+</form>
+<div>
+    <h2>Entries</h2>
+    <div id="userEntries">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>DOB</th>
+                        <th>Accepted Terms</th>
+                    </tr>
+                 </tbody>
+                   </table> 
+</div>
+</body>
+</html>
+  
